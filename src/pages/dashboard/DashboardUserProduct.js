@@ -10,7 +10,7 @@ export function Component() {
 
   return (
     <div>
-      Project
+      Product
       <div>ID: {product.id}</div>
       <div>Title: {product.title}</div>
     </div>

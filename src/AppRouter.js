@@ -61,7 +61,8 @@ const AppRouter = createBrowserRouter([
             lazy: () => import("./pages/dashboard/DashboardUserProduct")
           }
         ],
-      }
+      },
+
     ]
   },
   {
@@ -70,6 +71,14 @@ const AppRouter = createBrowserRouter([
       {
         path: "*",
         lazy: () => import("./pages/status/Status404")
+      },
+      {
+        path: "user/login",
+        lazy: () => import("./pages/user/UserLogin")
+      },
+      {
+        path: "user/logout",
+        lazy: () => import("./pages/user/UserLogout")
       },
     ]
   }

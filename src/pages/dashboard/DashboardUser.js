@@ -11,7 +11,7 @@ export function Component () {
 
   return (
     <div>
-      <div>User's ({params.uid}) dashboard</div>
+      <div>User's ({params.uid}) products</div>
       <ul>
         {products.map((product, index) => {
           return (

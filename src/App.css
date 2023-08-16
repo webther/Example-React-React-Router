@@ -1,38 +1,77 @@
-.App {
+/* Header */
+
+header {
+  background: #003eec;
+  color: #fff;
+  padding: 0;
+}
+
+/* Menu */
+
+nav.main-menu ul {
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+nav.main-menu ul li {
+  display: inline-block;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+nav.main-menu ul li a {
+  color: #fff;
+  display: inline-block;
+  padding: 10px 20px;
+}
+nav.main-menu ul li.item-user {
+  margin-left: auto;
+}
+nav.main-menu ul li.item-user span.welcome {
+  position: relative;
+  right: -10px;
+}
+
+/* First level menu */
+
+nav.main-menu > ul {
+  width: 100%;
+}
+
+/* Second level menu */
+
+nav.main-menu > ul > li > ul {
+  display: none;
+}
+nav.main-menu > ul > li:hover > ul {
+  display: block;
+  position: absolute;
+  background: #000;
+}
+nav.main-menu > ul > li:hover > ul li {
+  display: block;
+  padding: 0;
+}
+
+main {
+  margin: 40px auto;
+  max-width: 1090px;
+  text-align: left;
+}
+
+footer {
+  background: #003eec;
+  color: #fff;
+  padding: 10px 0;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
+/* User login form */
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+form.user-login .form-item {
+  margin: 10px 0;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+form.user-login .form-item label {
+  display: block;
+  margin-bottom: 5px;
 }

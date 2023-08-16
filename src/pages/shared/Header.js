@@ -1,10 +1,13 @@
 import React from "react"
 import { Link } from "react-router-dom"
+import { useSelector } from "react-redux";
 
 const Header = () => {
+  const user = useSelector((state) => state.user)
+
   return (
     <header>
-      <nav>
+      <nav className={'main-menu'}>
         <ul>
           <li>
             <Link to="/">Home</Link>
@@ -32,6 +35,12 @@ const Header = () => {
               <li><Link to="/dashboard/introduction">Introduction</Link></li>
               <li><Link to="/dashboard/123">User's dashboard</Link></li>
             </ul>
+          </li>
+          <li className={'item-user'}>
+            {!user.uid ? (
+              <Link to="/user/login">Log in</Link>
+              ) : <><span className={'welcome'}>[Welcome, {user.username}]</span> <Link to="/user/logout">Log out</Link></>
+            }
           </li>
         </ul>
       </nav>
